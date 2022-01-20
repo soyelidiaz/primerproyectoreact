@@ -25,7 +25,7 @@ class Busqueda extends Component {
         const response = await getAllPersonajes(this.state.busqueda);
         if(response.data.results){
             //toString y toLowerCase incluye búsqueda por minúsculas y por cadenas de letras
-            const result = response.data.results.filter(item => item.name.toString().toLowerCase().includes(this.state.busqueda))
+            const result = response.data.results.filter(item => item.name.toString().toLowerCase().includes(this.state.busqueda.toString().toLowerCase()))
             await this.setState({personajes_filtrados: result});
             console.log(this.state.personajes_filtrados)
         }
