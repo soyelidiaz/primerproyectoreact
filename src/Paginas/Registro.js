@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import FormGroup from '../Componentes/FormularioGen';
 import Button from 'react-bootstrap/Button'
 import firebase from '../Configuracion/firebase';
+import { Navigate } from 'react-router-dom';
 
 
 
@@ -27,7 +28,7 @@ function Registro() {
 }
 {
  alert('Registro Registrado =P!');
- window.location.href="/"
+ <Navigate to="/"/>
 } 
   }
     return (
